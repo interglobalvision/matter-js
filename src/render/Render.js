@@ -389,7 +389,7 @@ var Render = {};
                 c.translate(body.position.x, body.position.y); 
                 c.rotate(body.angle);
 
-                c.drawImage(texture, texture.width * -0.5 * sprite.xScale, texture.height * -0.5 * sprite.yScale, 
+                c.drawImage(texture, (texture.width * -0.5 + sprite.xOffset) * sprite.xScale, (texture.height * -0.5 + sprite.yOffset) * sprite.yScale, 
                             texture.width * sprite.xScale, texture.height * sprite.yScale);
 
                 // revert translation, hopefully faster than save / restore
